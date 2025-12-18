@@ -4,7 +4,7 @@
         <!-- <v-app-bar> -->
             <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer">
             </v-app-bar-nav-icon>
-            <v-app-bar-title> Bem vindo a intranet Hospital Regional de Nova Andradina</v-app-bar-title>
+            <v-app-bar-title> Bem vindo a intranet Hospital Regional de Nova Andradina Versão Beta</v-app-bar-title>
             <v-spacer></v-spacer>
             <v-btn>
                 <v-avatar>

@@ -1,6 +1,5 @@
 import { io } from 'socket.io-client';
-const baseURL = import.meta.env.VITE_SOCKET_URL || (import.meta.env.VITE_API_BASE_URL ? new URL(import.meta.env.VITE_API_BASE_URL).origin : 'https://intrahopital.onrender.com');
-
+const baseURL = import.meta.env.VITE_SOCKET_URL 
 const socket = io(baseURL);
 
 socket.on('connect', () => {

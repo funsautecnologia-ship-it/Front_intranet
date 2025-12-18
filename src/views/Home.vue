@@ -5,7 +5,7 @@
         <v-avatar size="80" class="mb-3" color="teal lighten-2">
           <v-icon size="60" color="white">mdi-hospital-building</v-icon>
         </v-avatar>
-        <h1 class="display-1 font-weight-bold text-teal mb-2">Bem-vindo à Intranet Hospitalar</h1>
+        <h1 class="display-1 font-weight-bold text-teal mb-2">Bem-vindo à Intranet Hospitalar Versão Beta</h1>
         <div class="subtitle-1 text-grey-darken-1 mb-6">
           Acesse informações, arquivos e acompanhe o movimento do hospital em tempo real.
         </div>

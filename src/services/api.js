@@ -2,7 +2,7 @@ import axios from 'axios';
 import store from '../store';
 import router from '../router';
 
-const baseURL = import.meta.env.VITE_API_BASE_URL || 'https://intrahopital.onrender.com/api';
+const baseURL = import.meta.env.VITE_API_BASE_URL ;
 
 const api = axios.create({
   baseURL,
