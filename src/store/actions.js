@@ -16,7 +16,6 @@ export default {
       return new Promise((resolve, reject) => {
         Auth.loadSession(token)
           .then((response) => {
-            console.log('Sessão carregada com sucesso:', response.data)
             commit('setToken', token)
             commit('setUser', response.data.user)
             resolve(response)
@@ -42,7 +41,6 @@ export default {
         Auth.login(user)
           .then((response) => {
             const token = response.data.token
-            console.log('user', response.data.user)
             localStorage.setItem('access_token', token)
             localStorage.setItem('user', JSON.stringify(response.data.user))
             api.defaults.headers.common['Authorization'] = `Bearer ${token}`
