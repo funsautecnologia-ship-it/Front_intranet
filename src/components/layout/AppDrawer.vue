@@ -44,7 +44,7 @@
           :key="'suporte-' + i"
           :prepend-icon="icon"
           :title="title"
-          :value="title"
+          :value="'suporte-' + title"
           :to="{ name: link }"
           router
         ></v-list-item>
@@ -64,7 +64,7 @@
           :key="'chamado-' + i"
           :prepend-icon="icon"
           :title="title"
-          :value="title"
+          :value="'chamado-' + title"
           :to="{ name: link }"
           router
         ></v-list-item>
@@ -85,7 +85,7 @@
           :key="'agendamento-' + i"
           :prepend-icon="icon"
           :title="title"
-          :value="title"
+          :value="'agendamento-' + title"
           :to="{ name: link }"
           router
         ></v-list-item>

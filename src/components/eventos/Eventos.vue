@@ -13,7 +13,7 @@
           ></v-text-field>
            <Editor
             v-model="newEvent.description"
-            api-key="6edwtqc2z5zetjyx6sgn7xn35xxsrb14yqnqbcscwvy380xc"
+            api-key="4y9w0ytymrqs82u4erptdj6yv6b5b2zq1a9s4owwzw9o4fkx"
              :init="{
                   toolbar_mode: 'sliding',
                   plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
