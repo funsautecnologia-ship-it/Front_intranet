@@ -60,6 +60,7 @@
 import { ref, onMounted } from 'vue'
 import Editor from '@tinymce/tinymce-vue'
 import { createEvent, deleteEvent } from '../../services/eventServices'
+import { useStore } from 'vuex';
 //import Editor from '../../utils/WysiwygEditor.vue'
 
 export default {
@@ -78,6 +79,7 @@ export default {
     const events = ref([])
     const valid = ref(false)
     const loading = ref(false) // Para feedback de carregamento
+    const store = useStore();
 
     
 
@@ -91,6 +93,10 @@ export default {
         newEvent.value.description = ''
         newEvent.value.file = null
         valid.value = false
+        store.dispatch('triggerSnackbar', {
+          text: 'Evento adicionado com sucesso!',
+          color: 'success',
+        })
       } catch (error) {
         alert('Erro ao adicionar evento!')
         console.error('Erro ao adicionar evento:', error)

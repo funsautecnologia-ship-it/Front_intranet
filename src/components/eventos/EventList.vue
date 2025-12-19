@@ -63,6 +63,8 @@ import { useRouter } from 'vue-router'
 import { fetchEvents, deleteEvent } from '../../services/eventServices'
 import { truncate, formatDate } from '../../utils/utils'
 
+import { useStore } from 'vuex';
+
 export default {
   props: {
     userData: Object,
@@ -70,6 +72,7 @@ export default {
   setup(props) {
     const events = ref([])
     const router = useRouter()
+    const store = useStore();
 
     const getEvento = (evento) => {
       router.push({ name: 'showEvento', params: { id: evento._id } })
@@ -90,13 +93,27 @@ export default {
     const removeEvent = async (eventId) => {
       if (props.userData?.role !== 'admin') {
         alert('Apenas administradores podem excluir eventos.')
+        store.dispatch('triggerSnackbar', {
+          text: 'Apenas administradores podem excluir eventos.',
+          color: 'error',
+        })
         return
       }
       try {
         await deleteEvent(eventId)
         events.value = events.value.filter(event => event._id !== eventId)
+       
+        store.dispatch('triggerSnackbar', {
+          text: 'Evento excluído com sucesso!',
+          color: 'success',
+        })
       } catch (error) {
-        console.error('Erro ao remover evento:', error)
+        store.dispatch('triggerSnackbar', {
+          text: 'Erro ao excluir evento!',
+          color: 'error',
+        })
+       
+       
       }
     }
 
