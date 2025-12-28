@@ -80,3 +80,14 @@ function navigate(item) {
     
 }
 </script>
+
+<style>
+.glass-drawer {
+  background-color: rgba(var(--v-theme-surface), 0.7) !important;
+  backdrop-filter: blur(10px);
+}
+
+.glass-drawer .v-navigation-drawer__content {
+  background: transparent !important;
+}
+</style>
